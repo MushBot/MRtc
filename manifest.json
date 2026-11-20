@@ -1,0 +1,313 @@
+{
+    "schema": 1,
+    "version": "2026.11.20",
+    "generated": "2026-11-20T05:51:46.633Z",
+    "note": "MRcode 编译工具链分片清单；分片按变化频率切分，未变化的分片可跨版本复用",
+    "shards": [
+        {
+            "id": "cli",
+            "title": "arduino-cli 主程序",
+            "zip": "cli.zip",
+            "zipSize": 15687026,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/cli.zip",
+            "urls": [],
+            "sha256": "1635bf717882d136740bf7f715e8a268a651bfee98b812a2d258cc980f490be5",
+            "files": 3,
+            "size": 31553411,
+            "dest": "ct",
+            "roots": [
+                "arduino-cli.exe",
+                "arduino-cli.json",
+                "arduino-cli.yaml"
+            ],
+            "optional": false
+        },
+        {
+            "id": "tc-gcc-riscv",
+            "title": "ESP32-C3 交叉编译器（riscv32 gcc 8.4，编译器本体）",
+            "zip": "tc-gcc-riscv.zip",
+            "zipSize": 85562410,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-gcc-riscv.zip",
+            "urls": [],
+            "sha256": "6864cf333d2e8c91178f2748673425ab7b696beac4b35ee13ed3a96b22645ae6",
+            "files": 1516,
+            "size": 259901733,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/bin",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/libexec",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/share",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/include",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/bin",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/sys-include"
+            ],
+            "optional": false
+        },
+        {
+            "id": "tc-gcc-riscv-mc",
+            "title": "ESP32-C3 交叉编译器（rv32imc/ilp32 运行库）",
+            "zip": "tc-gcc-riscv-mc.zip",
+            "zipSize": 53682785,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-gcc-riscv-mc.zip",
+            "urls": [],
+            "sha256": "568c6151f650f385cedd748c8b54e668652f2e928b3b438a9a81b966f88f088b",
+            "files": 34,
+            "size": 205714720,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/lib/rv32imc"
+            ],
+            "optional": false
+        },
+        {
+            "id": "tc-gcc-riscv-extra1",
+            "title": "ESP32-C3 交叉编译器（rv32i 与 no-rtti 变体库）",
+            "zip": "tc-gcc-riscv-extra1.zip",
+            "zipSize": 73019474,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-gcc-riscv-extra1.zip",
+            "urls": [],
+            "sha256": "8059f3f6b60cdca31fac20adfeb831467b0a859816917e3a647eaf6de0a694e4",
+            "files": 48,
+            "size": 282023876,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/lib/rv32i",
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/lib/no-rtti"
+            ],
+            "optional": true
+        },
+        {
+            "id": "tc-gcc-riscv-extra2",
+            "title": "ESP32-C3 交叉编译器（rv32imafc 浮点变体库）",
+            "zip": "tc-gcc-riscv-extra2.zip",
+            "zipSize": 53447387,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-gcc-riscv-extra2.zip",
+            "urls": [],
+            "sha256": "d33b57a28d55847d88cfe7c3a10339acede020eb9dfc2403e9538381babd41f2",
+            "files": 34,
+            "size": 205053890,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/lib/rv32imafc"
+            ],
+            "optional": true
+        },
+        {
+            "id": "tc-gcc-xts3",
+            "title": "ESP32-S3 交叉编译器（xtensa gcc 8.4）",
+            "zip": "tc-gcc-xts3.zip",
+            "zipSize": 87849373,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-gcc-xts3.zip",
+            "urls": [],
+            "sha256": "59bfaab85c19e34ab38dffe7ca889915d0d81443ccb9f6f7d077690820828a31",
+            "files": 1333,
+            "size": 274800716,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/xtensa-esp32s3-elf-gcc"
+            ],
+            "optional": false
+        },
+        {
+            "id": "tc-esp32-tools",
+            "title": "ESP32 烧录与打包工具（esptool/openocd 等）",
+            "zip": "tc-esp32-tools.zip",
+            "zipSize": 9578675,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-esp32-tools.zip",
+            "urls": [],
+            "sha256": "35d7e99432d0ec0d4c4a853eaeb766644651d169e07d28c0238a4002e0742f0d",
+            "files": 918,
+            "size": 14116348,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/tools/esptool_py",
+                "Arduino15/packages/esp32/tools/openocd-esp32",
+                "Arduino15/packages/esp32/tools/mkspiffs",
+                "Arduino15/packages/esp32/tools/mklittlefs"
+            ],
+            "optional": false
+        },
+        {
+            "id": "core-c3",
+            "title": "ESP32-C3 SDK 预编译库",
+            "zip": "core-c3.zip",
+            "zipSize": 66378753,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/core-c3.zip",
+            "urls": [],
+            "sha256": "58b0714d79ad0dacc10c0e88802643d3803a18b9f863099561bfbb6baa64f213",
+            "files": 2144,
+            "size": 199650442,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/hardware/esp32/2.0.7/tools/sdk/esp32c3"
+            ],
+            "optional": false
+        },
+        {
+            "id": "core-s3",
+            "title": "ESP32-S3 SDK 预编译库",
+            "zip": "core-s3.zip",
+            "zipSize": 73793401,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/core-s3.zip",
+            "urls": [],
+            "sha256": "4d440baf774368aea2441acd7903dca1c77d7ff1a6e3c7a5c6c70fe2c2e19bbb",
+            "files": 2391,
+            "size": 221104515,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/hardware/esp32/2.0.7/tools/sdk/esp32s3"
+            ],
+            "optional": false
+        },
+        {
+            "id": "core-common",
+            "title": "ESP32 core 公共部分（cores/libraries/variants）",
+            "zip": "core-common.zip",
+            "zipSize": 39071309,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/core-common.zip",
+            "urls": [],
+            "sha256": "5953d357155c516a73789d83fe2dfa56ebc73494672f19951b296e6fa96e3a62",
+            "files": 1273,
+            "size": 91024265,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/esp32/hardware/esp32/2.0.7/cores",
+                "Arduino15/packages/esp32/hardware/esp32/2.0.7/libraries",
+                "Arduino15/packages/esp32/hardware/esp32/2.0.7/variants"
+            ],
+            "optional": false
+        },
+        {
+            "id": "tc-avr",
+            "title": "Arduino AVR 工具链（Nano C/C++）",
+            "zip": "tc-avr.zip",
+            "zipSize": 64728600,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/tc-avr.zip",
+            "urls": [],
+            "sha256": "7deca6fa2723bd23baff23ce6d22091832832180fa89b75203e0e70d8a73b279",
+            "files": 2195,
+            "size": 253214150,
+            "dest": "ct",
+            "roots": [
+                "Arduino15/packages/arduino"
+            ],
+            "optional": true
+        },
+        {
+            "id": "libs",
+            "title": "默认库",
+            "zip": "libs.zip",
+            "zipSize": 49189556,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/libs.zip",
+            "urls": [],
+            "sha256": "13ef6f9cc2fee7dc544e311099ab497efbac04eae479e17682dcdc568dee239c",
+            "files": 6874,
+            "size": 178324782,
+            "dest": "ct",
+            "roots": [
+                "libraries"
+            ],
+            "optional": false
+        },
+        {
+            "id": "py-core",
+            "title": "Python 运行时（基础）",
+            "zip": "py-core.zip",
+            "zipSize": 38203211,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-core.zip",
+            "urls": [],
+            "sha256": "bdaf676855ce363b8c986c7f7ae8244d5acf48bad80ba9f1d9121c20bab84e6b",
+            "files": 5039,
+            "size": 96067061,
+            "dest": "root",
+            "roots": [
+                "mixpyBuild/win_python3"
+            ],
+            "optional": false
+        },
+        {
+            "id": "py-numpy",
+            "title": "Python 数值计算（numpy，约 380MB）",
+            "zip": "py-numpy.zip",
+            "zipSize": 29711160,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-numpy.zip",
+            "urls": [],
+            "sha256": "077ee42fbe3bda0cdfe2add35581e0da6d58e5929a0891427a0f0f41527cd003",
+            "files": 517,
+            "size": 97403371,
+            "dest": "root",
+            "roots": [],
+            "optional": true
+        },
+        {
+            "id": "py-numpy-mkl",
+            "title": "Python 数值计算加速库（numpy 的 MKL 主体）",
+            "zip": "py-numpy-mkl.zip",
+            "zipSize": 52487654,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-numpy-mkl.zip",
+            "urls": [],
+            "sha256": "d4be9c1668c20959286281f6031782b47f87fc55dc9b486429be70f6d50941b8",
+            "files": 8,
+            "size": 145262592,
+            "dest": "root",
+            "roots": [],
+            "optional": true
+        },
+        {
+            "id": "py-numpy-mkl2",
+            "title": "Python 数值计算加速库（MKL 旧 CPU 变体与 VML）",
+            "zip": "py-numpy-mkl2.zip",
+            "zipSize": 57104560,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-numpy-mkl2.zip",
+            "urls": [],
+            "sha256": "5d4cb27d22e192d919ea5b98ab4eb6758952b7de8aceaec10dc09f90d0160f3d",
+            "files": 12,
+            "size": 151631872,
+            "dest": "root",
+            "roots": [],
+            "optional": true
+        },
+        {
+            "id": "py-vision",
+            "title": "Python 图像支持（opencv-python / cv2，约 70MB）",
+            "zip": "py-vision.zip",
+            "zipSize": 24925305,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-vision.zip",
+            "urls": [],
+            "sha256": "c5aa05a1100a08b776afdf9b20a56e2407f3316a0153de4c43e739d2142ef173",
+            "files": 31,
+            "size": 70998024,
+            "dest": "root",
+            "roots": [],
+            "optional": true
+        },
+        {
+            "id": "py-ml",
+            "title": "Python 科学计算（scipy/sklearn/pandas/matplotlib）",
+            "zip": "py-ml.zip",
+            "zipSize": 50607540,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-ml.zip",
+            "urls": [],
+            "sha256": "3bb74f0d2fa2ece5620094c326ce5e141dd0c2e3e6bba722a9c63f345ac3e0d1",
+            "files": 3668,
+            "size": 146312528,
+            "dest": "root",
+            "roots": [],
+            "optional": true
+        },
+        {
+            "id": "py-scripts",
+            "title": "Mixly Python 脚本",
+            "zip": "py-scripts.zip",
+            "zipSize": 28585,
+            "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/py-scripts.zip",
+            "urls": [],
+            "sha256": "61f13e19f44649a5bc99ec432cb14accccc2ba83a84dc6463a94c7baee38b86d",
+            "files": 23,
+            "size": 183754,
+            "dest": "root",
+            "roots": [],
+            "optional": false
+        }
+    ]
+}
