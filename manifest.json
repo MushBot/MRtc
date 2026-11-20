@@ -1,24 +1,23 @@
 {
     "schema": 1,
     "version": "2026.11.20",
-    "generated": "2026-11-20T05:51:46.633Z",
+    "generated": "2026-11-20T06:30:43.030Z",
     "note": "MRcode 编译工具链分片清单；分片按变化频率切分，未变化的分片可跨版本复用",
     "shards": [
         {
             "id": "cli",
             "title": "arduino-cli 主程序",
             "zip": "cli.zip",
-            "zipSize": 15687026,
+            "zipSize": 15686478,
             "url": "https://raw.githubusercontent.com/MushBot/MRtc/main/shards/cli.zip",
             "urls": [],
-            "sha256": "1635bf717882d136740bf7f715e8a268a651bfee98b812a2d258cc980f490be5",
-            "files": 3,
-            "size": 31553411,
+            "sha256": "b6309c2b773de2afbc622d9865a1e49f6c992547d0ada8f67a580c9e912c9ead",
+            "files": 2,
+            "size": 31552730,
             "dest": "ct",
             "roots": [
                 "arduino-cli.exe",
-                "arduino-cli.json",
-                "arduino-cli.yaml"
+                "arduino-cli.json"
             ],
             "optional": false
         },
